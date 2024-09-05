@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        img{
+            height:20px;
+            width:20px;
+            padding-right:3px;
+            z-index: -1;
+        }
+        .text:hover{
+            background-color: green;
+        }
+        .main{
+            display: flex;
+            justify-content:flex-start;
+            column-gap: 20px;
+        }
+        
+        .search{
+            border:2px solid black;
+            border-radius: 30px;
+         }
+         input[type="search"]{
+            width:180px;
+            height:30px;
+            border-radius: 20px;
+         }
+         input[type="search"]:focus{
+            border: 3px solid rgb(11, 11, 11);
+         }
+         .dark{
+            width:20px;
+            height:20px;
+         }
+         .icon{
+            display:flex;
+            margin-left:170px;
+         }
+         .icon:hover{
+            background-color: purple;
+            border-radius: 10px;
+         }
+         .certify:hover{
+            background-color:purple;
+            border-radius: 10px;
+         }
+         .spaces:hover{
+            background-color: purple;
+            border-radius: 10px;
+         }
+         .spaces{
+            display:flex;
+            margin-left: 15px;
+         }
+         .certify{
+            display: flex;
+            margin-left: 15px;
+         }
+         .signup{
+            display:flex;
+         }
+         .a{
+            background-color: green;
+            color:white;
+            border-radius: 20px;
+            padding-top:7px;
+            padding-right: 15px;
+            padding-bottom:7px;
+            padding-left:10px;
+            position:absolute;
+            right: 67px;
+            z-index:1;
+            
+         }
+         .b{
+            background-color: rgba(0, 128, 0, 0.3);
+            color:black;
+            border-radius: 20px;
+            padding-top:7px;
+            padding-right: 10px;
+            padding-bottom:7px;
+            padding-left:20px;
+            position: absolute;
+            right:15px;
+         }
+         .element{
+            display:flex;
+            width:100;
+            justify-content: space-evenly;
+         }
+         nav{
+            background-color: black;
+            color:white;
+            width:100vw;
+            margin-top: 10px;
+            padding-top:5px;
+            padding-bottom:5px;ss  
+         }
+         span{
+            padding: 5.3px;
+         } 
+         .se{
+            position:absolute;
+            left:43.5%;
+            z-index: 1;
+            padding-top:4px;
+            
+            
+            
+            
+            
+         }
+         
+            
+         
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="logo">
+            <img src="https://fineproxy.org/wp-content/uploads/2023/07/w3schools.com_logo.png">
+        </div>
+        <div class="text">
+            Tutorials<i class="fa fa-caret-down"></i>
+        </div>
+        <div class="text">
+            Exercises<i class="fa fa-caret-down"></i>
+        </div>
+        <div class="text">
+            Certificates<i class="fa fa-caret-down"></i>
+        </div>
+        <div class="text">
+            Services<i class="fa fa-caret-down"></i>
+        </div>
+        <!-- <div class="search">
+            <input type="text" name="query"placeholder="search...."style="margin-left:15px ;border:none;">
+            <i class="fa fa-search" style="font-size:10px;padding-right:5px;padding-top:5px; border:none;"></i>
+        </div> -->
+        <div class="search">
+            <input type="search" placeholder="search..">
+            <img class="se" src="https://static.vecteezy.com/system/resources/previews/009/652/218/non_2x/magnifying-glass-icon-isolated-on-white-background-search-illustration-vector.jpg">
+        </div>
+        <div class="dark">
+           <img src="https://cdn-icons-png.flaticon.com/128/8338/8338708.png">
+        </div>
+        <div class="icon">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAe1BMVEX///8AAAD6+vrw8PDT09PJycnc3Ny+vr5CQkLs7Oypqak9PT00NDTY2Nj4+Pjp6el0dHSvr69sbGy7u7tcXFzh4eEfHx+KioqRkZFUVFTOzs6ioqJubm6cnJwsLCxLS0tlZWUSEhIaGhpOTk5/f39ZWVkODg4mJiYvLy/cEmuJAAAEwklEQVR4nO3d2XaCMBAGYAPivlutrRtabX3/J6y4ggQEkpyZ5PzffT0zlewTrNUAAAAAAAAAAAAAAAAAAAAAAAAINKgDMG5CHYBxwqOOwLC66FOHYNhSLKlDMGwrQuoQzPKFED51EEZNzxk2qYMwKjxnuKIOwqToIRVOjxedS4Zj6jAM6l4y7FGHYU5dXLk76H/cMgypAzFlJu5cXWBMHhmOqEMxoyGeZtTBGHGMZfhFHYwJTREXUIdjwDyR4YY6HP0+RdKCOiDd6uKVY8O+10tl2HNrAn5IJSjEgTooncaSBIWYUoelT0OaoENN0Z9nZDhvU4emh9fNSFCILnVserQyExRiSx2cDl85CQrxQR2eumNugvanONi+SVCIltUj//DvbYJCnIbUYVb3vSuQoBC7b+pAq1oWyi9i53nU4ON9Zg/hgDrc8oJ9iQSF2Nu26PdHpfKLjKz6GuVriXc61GEXFqSXu8XM7XhUg5+K+UW2/HMcZy8kiumOOc9xGrLNivIOdepEpAb9RZEpWjGbRZ9Xz9qud1b60ruaTzp1NlUb/rj86FfEaMwmxTN/OtlpTG43mXLK7sYLVr9a0vsdBbxaYYyvPFicV8Ssnk2Jev6+zDtfNqwV+9Vz/LBljzjI20DM1uI/ZXvqVEjQnqXFhV9mhR85Mu9fJMqtEa2sdZsVHzl6llafeKuCCVpccboulKCde4k30wIJWn4UHLxN0KZBUCpdZpLEcz1fSn6KTBJUG4zzHlQuj+ha7fwre+xnM86fFC+BLDISXOsJT11beUiWT1JDDbHpsVS+qzSQ7cTN+Wz9/qmvbGQdKp9y9qi4d676Ien5G6O52mXBrjy1el32/+gITY9rfbZy1fLsJUM+z2jtT1PPniyD/tQRmh6PwFSrXgaJg30tsWnx7ASVr0jEd6fYTGYSA5lydf3m8VGM7uclNndVL/A+l8N8Fr0vZ7qqS517S+TzFb7eAlHt4u8tkc3er+RUXu1cwbt9CpMJqTdJJ6jaFq//MyZj4TBjP1epR+1fPoLH9m/2unyrcoUgmp2yKNAf5h4BKkzg1mp/rsvwXeHPpvKUJLo9Q1703C9SOtJdVlz1b0RLb7hlNZaFD4zCZpWCiQPxlbUgLFEv0ltU+B6b9Fuk38Xqm3rLan3+gL4ZnjuarO3Np1ZQeVrCYqyoDfI7073KxIbLyrCRUy/iyi3srEd1Y0PRUjFNaYJf9hWFZJtJ7oQ49lKSdur+LpN1jz7Dl/HfqRv0V8lr5iF1OCbEuxs++0daxTajGEy3jHjcYeIyGdHu3hSP1IGYc3tOeWwfGdF2daB4usxQXZqspbTdm629WrE6kzYhoN4fM4/DJq5ZI8cf0lrtm+1VMgAAAAAAcFSTSVWeORu3fycnKgt38o35MS0+VwrNiCoaTy63xKGLJ+Fx3ul6xMGmjFs37/FGXT6XDbRqx4qMnNxfDXbxI/+Jc91N+/UlH79uHRnXZRWbvY4jb82PTKWF759OlTb0U28mXzvXEpPvvvpx8cx49rxe6F7925X/KL1xcjiM+LdCP1eKiCWu1UUhdRgmRW/S37t9nNpzdtp9F7jxyzF59o5/hbXa2O1WCAAAAAAAAAAAAAAAAAAAAHD2D73dKaHzR4/GAAAAAElFTkSuQmCC">
+            <div> Plus</div> 
+        </div>
+        <div class="spaces">
+           <img src="https://cdn.icon-icons.com/icons2/3002/PNG/512/html_icon_187944.png">
+            <div>Spaces</div>
+        </div>
+        <div class="certify">
+            <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png">
+            <div>Get Certified</div>
+        </div>
+        <div class="signup">
+            <button class="a">Sign Up</button>
+            <button class="b">Log In</button>
+        </div>
+    </div>
+    <div class="element">
+        <nav>
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JAVASCRIPT</span>
+            <span>SQL</span>
+            <span>PYTHON</span>
+            <span>JAVA</span>
+            <span>PHP</span>
+            <span>HOW TO</span>
+            <span>W3.CSS</span>
+            <span>C</span>
+            <span>C++</span>
+            <span>c#</span>
+            <span>BOOTSTRAP</span>
+            <span>REACT</span>
+            <span>MYSQL</span>
+            
+            <span>JQUERY</span>
+            <span>EXCEL</span>
+            
+            <span>XML</span>
+            <span>DJANGO</span>
+            <span>NUMPY</span>
+            <span>></span>
+        </nav>
+    </div>
+</body>
+</html>
